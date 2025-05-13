@@ -1,0 +1,52 @@
+
+body {
+    width: 100%;
+    margin: 10px;
+    padding: 0;
+}
+
+svg {
+    width: 800px;
+    height: 400px;
+}
+
+svg path, svg line {
+    fill: none;
+    stroke: black;
+    stroke-width: 1;  /* Уточнил свойство для линии */
+}
+
+svg text {
+    font: 8px Verdana;
+}
+
+/* Стили для таблицы */
+table {
+    margin: 20px auto;
+    width: 100%;  /* Сделал таблицу чуть меньше для лучшего отображения */
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;  /* Сразу выравнивание текста по центру для th и td */
+}
+
+td {
+    text-align: left;
+}
+
+/* Стили для строк таблицы */
+.greyTr {
+    background-color: lightgrey;
+}
+
+th {
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}

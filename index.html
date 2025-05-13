@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="http://d3js.org/d3.v7.min.js"> </script>
+  <script src="JavaScript/data.js"></script>
+  <script src="JavaScript/main.js"></script>
+  <script src="JavaScript/table.js"></script>
+  <script src="JavaScript/chart.js"></script>
+</head>
+
+<body>
+
+  <h3>Список самых высоких зданий</h3>
+  <form>
+    Значение по оси OX
+    <p>
+      <input type="radio" checked="checked" value="Страна" id="ox1" name="ox">
+      <label for="ox1">Страна</label><br>
+      <input type="radio" value="Год" id="ox2" name="ox">
+      <label for="ox2">Год</label>
+    </p>
+    Значение по оси OY
+    <p>
+      <input type="checkbox" checked="checked" id="oy1" name="oy" onchange="changeOY()">
+      <label id="oy1_s" for="oy1">Максимальная высота</label><br>
+      <input type="checkbox" id="oy2" name="oy" onchange="changeOY()">
+      <label id="oy2_s" for="oy2">Минимальная высота</label>
+    </p>
+    <p>
+      <label for="typeChart">Тип графика</label>
+      <select name="type" id="typeChart">
+        <option value="1">Точечная диаграмма</option>
+        <option value="2">Гистограмма</option>
+      </select>
+    </p>
+    <input type="button" id="creatChart" value="Построить" onclick="f()">
+    <br>
+    <svg></svg>
+    <p>
+      <input type="button" id="changeTable" value="Скрыть таблицу" onclick="change()">
+    </p>
+  </form>
+  <table id="build"> </table>
+</body>
+
+</html>
